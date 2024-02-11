@@ -33,4 +33,7 @@ return {
 	{
 		"mhartington/formatter.nvim",
 	},
+	{
+		"folke/trouble.nvim",
+	},
 }

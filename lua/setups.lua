@@ -1,5 +1,4 @@
 --- file explorer ---
-
 local function tree_on_attach(bufnr)
 	local api = require("nvim-tree.api")
 
@@ -81,7 +80,9 @@ require("formatter").setup({
 				}
 			end,
 		},
-
+		typescript = {
+			require("formatter.filetypes.typescript"),
+		},
 		["*"] = {
 			require("formatter.filetypes.any").remove_trailing_whitespace,
 		},
@@ -128,3 +129,7 @@ require("nvim-autopairs").setup({})
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 local cmp = require("cmp")
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+
+require("trouble").setup({
+	icons = false,
+})
