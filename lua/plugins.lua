@@ -36,4 +36,7 @@ return {
 	{
 		"folke/trouble.nvim",
 	},
+	{
+		"tpope/vim-fugitive",
+	},
 }
