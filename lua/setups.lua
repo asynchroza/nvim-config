@@ -114,3 +114,5 @@ cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 require("trouble").setup({
 	icons = true,
 })
+
+require("gitsigns").setup()
