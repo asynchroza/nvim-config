@@ -115,4 +115,27 @@ require("trouble").setup({
 	icons = true,
 })
 
-require("gitsigns").setup()
+require("gitsigns").setup({
+	current_line_blame = true,
+	current_line_blame_opts = {
+		virt_text = true,
+		virt_text_pos = "eol",
+		delay = 5000,
+	},
+	on_attach = function(bufnr)
+		local gs = package.loaded.gitsigns
+
+		local function map(mode, l, r, opts)
+			opts = opts or {}
+			opts.buffer = bufnr
+			vim.keymap.set(mode, l, r, opts)
+		end
+
+		map("n", "<leader>mp", gs.preview_hunk)
+		map("n", "<leader>mb", function()
+			gs.blame_line({ full = true })
+		end)
+		map("n", "<leader>mdf", gs.diffthis)
+		map("n", "<leader>mdr", gs.toggle_deleted)
+	end,
+})
