@@ -17,10 +17,6 @@ return {
 		},
 	},
 	{
-		"prettier/vim-prettier",
-		build = "yarn install --frozen-lockfile",
-	},
-	{
 		"ibhagwan/fzf-lua",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},

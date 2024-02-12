@@ -10,6 +10,7 @@ vim.api.nvim_set_keymap("n", "∑", "<C-w>w", { noremap = true, silent = true })
 --- fuzzy finder & live grep ---
 vim.keymap.set("n", "<leader>s", "<cmd>lua require('fzf-lua').files()<CR>", { silent = true })
 vim.keymap.set("n", "<leader>g", "<cmd>lua require('fzf-lua').live_grep()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>r", "<cmd>lua require('fzf-lua').grep()<CR>", { silent = true })
 
 --- tabs ---
 vim.keymap.set("n", "<leader>h", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", { silent = true })
