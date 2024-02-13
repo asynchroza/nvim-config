@@ -60,9 +60,10 @@ require("fzf-lua").setup({
 })
 
 --- color theme ---
+--[[
 require("catppuccin").setup({
 	term_colors = true,
-	transparent_background = true,
+	--- transparent_background = true, ---
 	color_overrides = {
 		mocha = {
 			base = "#000000",
@@ -70,6 +71,7 @@ require("catppuccin").setup({
 			crust = "#000000",
 		},
 	},
+	--
 	integrations = {
 		telescope = {
 			enabled = true,
@@ -77,6 +79,8 @@ require("catppuccin").setup({
 		},
 	},
 })
+]]
+--
 
 --- autopairs ---
 require("nvim-autopairs").setup({})

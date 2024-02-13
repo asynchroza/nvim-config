@@ -1,5 +1,5 @@
 --- color theme ---
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("nordic")
 
 --- nvim tree ---
 vim.api.nvim_set_keymap("n", "<leader>ff", ":NvimTreeToggle<CR>", { noremap = true, silent = true })

@@ -4,11 +4,6 @@ return {
 		dependencies = { "hrsh7th/nvim-cmp" },
 	},
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
-	},
-	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
 		lazy = false,
@@ -37,5 +32,13 @@ return {
 	},
 	{
 		"lewis6991/gitsigns.nvim",
+	},
+	{
+		"AlexvZyl/nordic.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("nordic").load()
+		end,
 	},
 }

@@ -60,6 +60,3 @@ autocmd("LspAttach", {
 		end, opts)
 	end,
 })
-
---- it seems there's a pluggin which overrides the custom theme behaviour ---
-require("theme")
