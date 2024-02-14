@@ -43,50 +43,23 @@ require("formatter").setup({
 	},
 })
 
---- fzf lua ---
-local actions = require("fzf-lua.actions")
-
-require("fzf-lua").setup({
-	actions = {
-		files = {
-			["ctrl-t"] = actions.file_edit_or_qf,
-			["ctrl-s"] = actions.file_split,
-			["ctrl-v"] = actions.file_vsplit,
-			["default"] = actions.file_tabedit,
-			["alt-q"] = actions.file_sel_to_qf,
-			["alt-l"] = actions.file_sel_to_ll,
-		},
-	},
-})
-
---- color theme ---
---[[
-require("catppuccin").setup({
-	term_colors = true,
-	--- transparent_background = true, ---
-	color_overrides = {
-		mocha = {
-			base = "#000000",
-			mantle = "#000000",
-			crust = "#000000",
-		},
-	},
-	--
-	integrations = {
-		telescope = {
-			enabled = true,
-			style = "nvchad",
-		},
-	},
-})
-]]
---
+--- fzf ---
+require("fzf-lua").setup({})
 
 --- autopairs ---
 require("nvim-autopairs").setup({})
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 local cmp = require("cmp")
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+
+--- https://www.reddit.com/r/neovim/comments/101nga4/comment/j2xxpng/?utm_source=share&utm_medium=web2x&context=3 ---
+cmp.setup({
+	window = {
+		documentation = cmp.config.window.bordered({
+			winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None",
+		}),
+	},
+})
 
 require("trouble").setup({
 	icons = true,
