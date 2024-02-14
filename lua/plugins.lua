@@ -41,4 +41,10 @@ return {
 			require("nordic").load()
 		end,
 	},
+	{
+
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+	},
 }
