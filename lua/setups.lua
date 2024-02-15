@@ -87,7 +87,8 @@ cmp.setup({
 })
 
 require("trouble").setup({
-	icons = true,
+	multiline = true,
+	indent_lines = true,
 })
 
 require("gitsigns").setup({
@@ -136,12 +137,12 @@ require("copilot").setup({
 		auto_trigger = true,
 		debounce = 75,
 		keymap = {
-			accept = "<M-l>",
+			accept = "<S-Enter>",
 			accept_word = false,
 			accept_line = false,
-			next = "<M-]>",
-			prev = "<M-[>",
-			dismiss = "<C-]>",
+			next = "<S-]>",
+			prev = "<S-[>",
+			dismiss = "<S-BS>",
 		},
 	},
 	filetypes = {
@@ -156,4 +157,11 @@ require("copilot").setup({
 	},
 	copilot_node_command = "node", -- Node.js version must be > 18.x
 	server_opts_overrides = {},
+})
+
+require("lsp-colors").setup({
+	Error = "#db4b4b",
+	Warning = "#e0af68",
+	Information = "#0db9d7",
+	Hint = "#10B981",
 })

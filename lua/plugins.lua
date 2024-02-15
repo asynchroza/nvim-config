@@ -39,7 +39,8 @@ return {
 		cmd = "Copilot",
 		event = "InsertEnter",
 	},
-	{ "navarasu/onedark.nvim" },
+	{ "olivercederborg/poimandres.nvim", lazy = false, priority = 1000 },
 	{ "notjedi/nvim-rooter.lua" },
 	{ "hrsh7th/cmp-path" },
+	{ "folke/lsp-colors.nvim" },
 }
