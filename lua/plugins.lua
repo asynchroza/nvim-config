@@ -41,4 +41,5 @@ return {
 	},
 	{ "navarasu/onedark.nvim" },
 	{ "notjedi/nvim-rooter.lua" },
+	{ "hrsh7th/cmp-path" },
 }

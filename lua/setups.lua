@@ -60,6 +60,9 @@ cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
 --- https://www.reddit.com/r/neovim/comments/101nga4/comment/j2xxpng/?utm_source=share&utm_medium=web2x&context=3 ---
 cmp.setup({
+	sources = {
+		{ name = "path" },
+	},
 	window = {
 		documentation = cmp.config.window.bordered({
 			winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None",
