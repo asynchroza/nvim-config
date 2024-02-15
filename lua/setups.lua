@@ -16,6 +16,10 @@ end
 
 require("nvim-tree").setup({
 	on_attach = tree_on_attach,
+	diagnostics = {
+		enable = true,
+		show_on_dirs = true,
+	},
 	disable_netrw = true,
 	hijack_netrw = true,
 	respect_buf_cwd = true,
@@ -26,6 +30,14 @@ require("nvim-tree").setup({
 	},
 	view = {
 		relativenumber = true,
+		width = 40,
+	},
+	log = {
+		enable = true,
+		truncate = true,
+		types = {
+			diagnostics = true,
+		},
 	},
 })
 
@@ -61,7 +73,11 @@ cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 --- https://www.reddit.com/r/neovim/comments/101nga4/comment/j2xxpng/?utm_source=share&utm_medium=web2x&context=3 ---
 cmp.setup({
 	sources = {
+		{ name = "nvim_lsp" },
+		{ name = "buffer" },
+		{ name = "luasnip" },
 		{ name = "path" },
+		-- { name = "copilot" }, --
 	},
 	window = {
 		documentation = cmp.config.window.bordered({
