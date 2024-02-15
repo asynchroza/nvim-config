@@ -1,3 +1,5 @@
+require("nvim-rooter").setup({})
+
 --- file explorer ---
 local function tree_on_attach(bufnr)
 	local api = require("nvim-tree.api")
@@ -18,6 +20,10 @@ require("nvim-tree").setup({
 	hijack_netrw = true,
 	respect_buf_cwd = true,
 	sync_root_with_cwd = true,
+	update_focused_file = {
+		enable = true,
+		update_cwd = true,
+	},
 	view = {
 		relativenumber = true,
 	},

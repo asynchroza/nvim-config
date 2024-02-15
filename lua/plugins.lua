@@ -40,4 +40,5 @@ return {
 		event = "InsertEnter",
 	},
 	{ "navarasu/onedark.nvim" },
+	{ "notjedi/nvim-rooter.lua" },
 }
