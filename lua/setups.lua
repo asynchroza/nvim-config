@@ -61,7 +61,7 @@ require("formatter").setup({
 	},
 })
 
---- fzf ---
+-- fzf ---
 require("fzf-lua").setup({})
 
 --- autopairs ---
