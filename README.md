@@ -13,3 +13,4 @@
 * `<leader>vrn` - rename variable
 * `<leader>h` - open harpoon menu
 * `<leader>m` - mark page with harpoon
+* `:vs` - vertical split
