@@ -39,7 +39,11 @@ return {
 		cmd = "Copilot",
 		event = "InsertEnter",
 	},
-	{ "olivercederborg/poimandres.nvim", lazy = false, priority = 1000 },
+	{
+		"AlexvZyl/nordic.nvim",
+		lazy = false,
+		priority = 1000,
+	},
 	{ "notjedi/nvim-rooter.lua" },
 	{ "hrsh7th/cmp-path" },
 	{ "folke/lsp-colors.nvim" },
