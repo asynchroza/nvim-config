@@ -11,3 +11,6 @@
 | `va[symbol]` - `va{` | select everything between the matching symbols |
 | `da[symbol]` - `da{` | delete everything between the matching symbols |
 | `ya[symbol]` - `ya{` | yank (copy) everything between the matching symbols |
+| `u` | make letters lowercase |
+| `U` | make letters uppercase |
+| `~` | reverse case |
