@@ -15,3 +15,4 @@
 | `u` | make letters lowercase |
 | `U` | make letters uppercase |
 | `~` | reverse case |
+| `P` | paste without replacing clipboard buffer |
