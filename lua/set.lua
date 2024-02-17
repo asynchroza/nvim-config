@@ -36,3 +36,9 @@ end)
 vim.diagnostic.config({ virtual_text = { spacing = 0 }, update_in_insert = false })
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes:1"
+
+--- REFACTORING ---
+vim.keymap.set({ "n", "x" }, "<leader>rr", function()
+	require("refactoring").select_refactor()
+end)
+--

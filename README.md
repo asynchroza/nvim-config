@@ -16,3 +16,4 @@
 | `<leader>h`         | Open harpoon menu                                  |
 | `<leader>m`         | Mark page with harpoon                             |
 | `:vs`               | Vertical split                                     |
+| `<leader>rr`        | Show refactoring options                           |

@@ -47,4 +47,15 @@ return {
 	{ "notjedi/nvim-rooter.lua" },
 	{ "hrsh7th/cmp-path" },
 	{ "folke/lsp-colors.nvim" },
+	{
+		"ThePrimeagen/refactoring.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+		},
+		lazy = true,
+		config = function()
+			require("refactoring").setup()
+		end,
+	},
 }
