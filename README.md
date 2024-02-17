@@ -1,4 +1,5 @@
 # Misho's Neovim Configuration
+[Cheatsheet](./CHEATSHEET.md)
 
 ## Commands
 * `<leader>ff` - open neovim tree
