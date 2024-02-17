@@ -9,4 +9,5 @@
 | `ciw`       | change word |
 | `viw`       | select word |
 | `va[symbol]` - `va{` | select everything between the matching symbols |
-| `ya[symbol]` - `va{` | yank (copy) everything between the matching symbols |
+| `da[symbol]` - `da{` | delete everything between the matching symbols |
+| `ya[symbol]` - `ya{` | yank (copy) everything between the matching symbols |
