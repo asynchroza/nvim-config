@@ -7,3 +7,6 @@
 | `dw`        | cut from here to next word |
 | `diw`       | delete word |
 | `ciw`       | change word |
+| `viw`       | select word |
+| `va[symbol]` - `va{` | select everything between the matching symbols |
+| `ya[symbol]` - `va{` | yank (copy) everything between the matching symbols |
