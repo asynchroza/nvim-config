@@ -40,7 +40,7 @@ return {
 		event = "InsertEnter",
 	},
 	{
-		"AlexvZyl/nordic.nvim",
+		"DeviusVim/deviuspro.nvim",
 		lazy = false,
 		priority = 1000,
 	},
