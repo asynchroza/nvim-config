@@ -58,4 +58,8 @@ return {
 			require("refactoring").setup()
 		end,
 	},
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
 }

@@ -62,7 +62,7 @@ require("formatter").setup({
 })
 
 -- fzf ---
-require("fzf-lua").setup({})
+require("fzf-lua").setup({ "default" })
 
 --- autopairs ---
 require("nvim-autopairs").setup({})
@@ -164,4 +164,47 @@ require("lsp-colors").setup({
 	Warning = "#e0af68",
 	Information = "#0db9d7",
 	Hint = "#10B981",
+})
+
+require("lualine").setup({
+	options = {
+		icons_enabled = true,
+		theme = "auto",
+		component_separators = { left = "", right = "" },
+		section_separators = { left = "", right = "" },
+		disabled_filetypes = {
+			statusline = {
+				"NvimTree",
+			},
+			winbar = {},
+		},
+		ignore_focus = {},
+		always_divide_middle = true,
+		globalstatus = false,
+		refresh = {
+			statusline = 1000,
+			tabline = 1000,
+			winbar = 1000,
+		},
+	},
+	sections = {
+		lualine_a = { "branch" },
+		lualine_b = { "diff", "diagnostics" },
+		lualine_c = { "filename" },
+		lualine_x = { "filetype" },
+		lualine_y = { "progress" },
+		lualine_z = { "location" },
+	},
+	inactive_sections = {
+		lualine_a = { "branch" },
+		lualine_b = { "diff" },
+		lualine_c = { "filename" },
+		lualine_x = { "filetype" },
+		lualine_y = { "progress" },
+		lualine_z = { "location" },
+	},
+	tabline = {},
+	winbar = {},
+	inactive_winbar = {},
+	extensions = {},
 })
