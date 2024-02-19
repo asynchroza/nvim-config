@@ -49,8 +49,14 @@ require("formatter").setup({
 		typescript = {
 			require("formatter.filetypes.typescript").prettier,
 		},
+		typescriptreact = {
+			require("formatter.filetypes.typescriptreact").prettier,
+		},
 		javascript = {
 			require("formatter.filetypes.javascript").prettier,
+		},
+		javascriptreact = {
+			require("formatter.filetypes.javascriptreact").prettier,
 		},
 		lua = {
 			require("formatter.filetypes.lua").stylua,
