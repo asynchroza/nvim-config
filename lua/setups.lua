@@ -214,3 +214,12 @@ require("lualine").setup({
 	inactive_winbar = {},
 	extensions = {},
 })
+
+require("Comment").setup({
+	toggler = {
+		line = "<D-/>",
+	},
+	opleader = {
+		line = "<D-/>",
+	},
+})
