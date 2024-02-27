@@ -66,4 +66,7 @@ return {
 		"numToStr/Comment.nvim",
 		lazy = false,
 	},
+	{
+		"NMAC427/guess-indent.nvim",
+	},
 }

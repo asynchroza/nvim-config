@@ -223,3 +223,5 @@ require("Comment").setup({
 		line = "<D-/>",
 	},
 })
+
+require("guess-indent").setup({})
