@@ -69,4 +69,8 @@ return {
 	{
 		"NMAC427/guess-indent.nvim",
 	},
+	{
+
+		"rafamadriz/friendly-snippets",
+	},
 }

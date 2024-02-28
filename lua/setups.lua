@@ -225,3 +225,18 @@ require("Comment").setup({
 })
 
 require("guess-indent").setup({})
+
+require("luasnip").setup({})
+
+require("luasnip.loaders.from_vscode").lazy_load({
+	include = {
+		"typescript",
+		"typescriptreact",
+		"javascript",
+		"javascriptreact",
+		"lua",
+		"html",
+		"python",
+		"go",
+	},
+})

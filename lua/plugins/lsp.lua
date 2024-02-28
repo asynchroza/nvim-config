@@ -64,8 +64,8 @@ return {
 				end,
 			},
 			mapping = cmp.mapping.preset.insert({
-				["∆"] = cmp.mapping.select_prev_item(cmp_select), --- option + k
-				["<tab>"] = cmp.mapping.select_next_item(cmp_select), --- option + j
+				["∆"] = cmp.mapping.select_prev_item(cmp_select),
+				["<tab>"] = cmp.mapping.select_next_item(cmp_select),
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
 				--- ["<C-t>"] = cmp.mapping.complete(), ---
 			}),
