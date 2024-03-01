@@ -40,7 +40,7 @@ return {
 		event = "InsertEnter",
 	},
 	{
-		"DeviusVim/deviuspro.nvim",
+		"projekt0n/github-nvim-theme",
 		lazy = false,
 		priority = 1000,
 	},
@@ -72,5 +72,8 @@ return {
 	{
 
 		"rafamadriz/friendly-snippets",
+	},
+	{
+		"xiyaowong/transparent.nvim",
 	},
 }
