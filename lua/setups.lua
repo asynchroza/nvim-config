@@ -61,6 +61,9 @@ require("formatter").setup({
 		lua = {
 			require("formatter.filetypes.lua").stylua,
 		},
+		markdown = {
+			require("formatter.filetypes.markdown").prettier,
+		},
 		["*"] = {
 			require("formatter.filetypes.any").remove_trailing_whitespace,
 		},
