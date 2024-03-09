@@ -41,3 +41,9 @@ vim.opt.signcolumn = "yes:1"
 vim.keymap.set({ "n", "x" }, "<leader>rr", function()
 	require("refactoring").select_refactor()
 end)
+
+--- TABS ---
+vim.keymap.set("n", "<leader>1", "1gt<CR>", { silent = true })
+vim.keymap.set("n", "<leader>2", "2gt<CR>", { silent = true })
+vim.keymap.set("n", "<leader>3", "3gt<CR>", { silent = true })
+vim.keymap.set("n", "<leader>4", "4gt<CR>", { silent = true })

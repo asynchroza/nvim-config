@@ -70,8 +70,17 @@ require("formatter").setup({
 	},
 })
 
+local lua_actions = require("fzf-lua.actions")
+
 -- fzf ---
-require("fzf-lua").setup({ "default" })
+require("fzf-lua").setup({
+	actions = {
+		files = {
+			["default"] = lua_actions.file_tabedit,
+			["ctrl-t"] = lua_actions.file_edit_or_qf,
+		},
+	},
+})
 
 --- autopairs ---
 require("nvim-autopairs").setup({})
