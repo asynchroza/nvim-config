@@ -40,7 +40,7 @@ return {
 		event = "InsertEnter",
 	},
 	{
-		"projekt0n/github-nvim-theme",
+		"rebelot/kanagawa.nvim",
 		lazy = false,
 		priority = 1000,
 	},

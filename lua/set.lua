@@ -1,5 +1,5 @@
 --- color theme ---
-vim.cmd.colorscheme("github_dark")
+vim.cmd.colorscheme("kanagawa-dragon")
 
 --- nvim tree ---
 vim.api.nvim_set_keymap("n", "<leader>ff", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
