@@ -31,6 +31,7 @@ return {
 				"rust_analyzer",
 				"tsserver",
 				"eslint",
+				"prismals",
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)
