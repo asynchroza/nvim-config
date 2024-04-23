@@ -32,6 +32,7 @@ return {
 				"tsserver",
 				"eslint",
 				"prismals",
+				"gopls",
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)
