@@ -1,3 +1,5 @@
+--- formatter ---
+
 return {
 	"stevearc/conform.nvim",
 	opts = {},
@@ -6,6 +8,7 @@ return {
 			formatters_by_ft = {
 				javascript = { "prettier" },
 				lua = { "stylua" },
+				markdown = { "prettier" },
 			},
 			format_on_save = {
 				timeout_ms = 1000,
