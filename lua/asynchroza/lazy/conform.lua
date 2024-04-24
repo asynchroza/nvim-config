@@ -6,7 +6,7 @@ return {
 	config = function()
 		require("conform").setup({
 			formatters_by_ft = {
-				javascript = { "prettier" },
+				javascript = { { "eslint_d", "prettier" } },
 				lua = { "stylua" },
 				markdown = { "prettier" },
 			},
