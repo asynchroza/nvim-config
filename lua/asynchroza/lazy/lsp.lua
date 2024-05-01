@@ -58,14 +58,17 @@ return {
 		local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
 		cmp.setup({
+			completion = {
+				completeopt = "menu,menuone,noinsert",
+			},
 			snippet = {
 				expand = function(args)
-					require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
+					require("luasnip").lsp_expand(args.body)
 				end,
 			},
 			mapping = cmp.mapping.preset.insert({
-				["K"] = cmp.mapping.select_prev_item(cmp_select),
-				["J"] = cmp.mapping.select_next_item(cmp_select),
+				["<C-k>"] = cmp.mapping.select_prev_item(cmp_select),
+				["<C-j>"] = cmp.mapping.select_next_item(cmp_select),
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
 				["<Tab>"] = cmp.mapping.confirm({ select = true }),
 			}),
@@ -77,7 +80,6 @@ return {
 			}),
 		})
 		vim.diagnostic.config({
-			-- update_in_insert = true,
 			float = {
 				focusable = false,
 				style = "minimal",
