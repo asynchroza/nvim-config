@@ -21,6 +21,14 @@
 | `<leader>ws`    | LSP - search for symbol in workspace |
 | `<leader>e`     | Neotree - open in float mode         |
 | `<leader><tab>` | Neotree - open on left side          |
+| `<leader>hh`    | Harpoon - open UI                    |
+| `<leader>a`     | Harpoon - add mark                   |
+| `<leader>1`     | Harpoon - mark 1                     |
+| `<leader>2`     | Harpoon - mark 2                     |
+| `<leader>3`     | Harpoon - mark 3                     |
+| `<leader>4`     | Harpoon - mark 4                     |
+| `<C-[>`         | Harpoon - Go to previous mark        |
+| `<C-]>`         | Harpoon - Go to next mark            |
 
 # Tips & Tricks
 
