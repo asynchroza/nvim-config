@@ -66,8 +66,8 @@ return {
 			mapping = cmp.mapping.preset.insert({
 				["K"] = cmp.mapping.select_prev_item(cmp_select),
 				["J"] = cmp.mapping.select_next_item(cmp_select),
+				["<CR>"] = cmp.mapping.confirm({ select = true }),
 				["<Tab>"] = cmp.mapping.confirm({ select = true }),
-				--- ["<S-Space>"] = cmp.mapping.complete() ---
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
@@ -76,7 +76,6 @@ return {
 				{ name = "buffer" },
 			}),
 		})
-
 		vim.diagnostic.config({
 			-- update_in_insert = true,
 			float = {
