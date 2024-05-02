@@ -12,12 +12,19 @@ return {
 		vim.keymap.set("n", "<leader>hh", function()
 			harpoon.ui:toggle_quick_menu(harpoon:list())
 		end)
+		--
+		--[[ 
+
+		-- This is remapping escape in normal mode for some reason --
 		vim.keymap.set("n", "<C-[>", function()
 			harpoon:list():prev()
 		end)
 		vim.keymap.set("n", "<C-]>", function()
 			harpoon:list():next()
 		end)
+		]]
+		--
+
 		vim.keymap.set("n", "<leader>1", function()
 			harpoon:list():select(1)
 		end)
