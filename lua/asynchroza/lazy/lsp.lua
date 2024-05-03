@@ -30,8 +30,6 @@ return {
 				"lua_ls",
 				"rust_analyzer",
 				"tsserver",
-				"eslint",
-				"prismals",
 				"gopls",
 			},
 			handlers = {
@@ -60,16 +58,19 @@ return {
 		local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
 		cmp.setup({
+			completion = {
+				completeopt = "menu,menuone,noinsert",
+			},
 			snippet = {
 				expand = function(args)
-					require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
+					require("luasnip").lsp_expand(args.body)
 				end,
 			},
 			mapping = cmp.mapping.preset.insert({
-				["∆"] = cmp.mapping.select_prev_item(cmp_select),
-				["<tab>"] = cmp.mapping.select_next_item(cmp_select),
+				["<C-k>"] = cmp.mapping.select_prev_item(cmp_select),
+				["<C-j>"] = cmp.mapping.select_next_item(cmp_select),
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
-				--- ["<C-t>"] = cmp.mapping.complete(), ---
+				["<Tab>"] = cmp.mapping.confirm({ select = true }),
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
@@ -78,9 +79,7 @@ return {
 				{ name = "buffer" },
 			}),
 		})
-
 		vim.diagnostic.config({
-			-- update_in_insert = true,
 			float = {
 				focusable = false,
 				style = "minimal",
