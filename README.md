@@ -38,6 +38,13 @@
 | `tl`            | Trouble - Loclist (idk what this does)                   |
 | `tr`            | Trouble - LSP References                                 |
 
+# Additional Commands
+
+## NoNeckPain
+
+`:NoNeckPain` - Place a buffer in the middle of the screen.
+`:NoNeckPainResize` - Resize the buffer (arg INT).
+
 # Tips & Tricks
 
 Pressing K once again in a hover window would lead to corresponding manpage (if any). [JavaScript manpages](https://github.com/mohd-akram/mdnpages).
