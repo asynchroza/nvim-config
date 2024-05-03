@@ -6,12 +6,14 @@ return {
 	config = function()
 		require("conform").setup({
 			formatters_by_ft = {
-				javascript = { { "eslint_d", "prettier" } },
+				javascript = { { "prettierd" } },
+				typescript = { { "prettierd" } },
+				javascriptreact = { { "prettierd" } },
+				typescriptreact = { { "prettierd" } },
 				lua = { "stylua" },
 				markdown = { "prettier" },
 			},
 			format_on_save = {
-				timeout_ms = 1000,
 				lsp_fallback = true,
 			},
 		})
