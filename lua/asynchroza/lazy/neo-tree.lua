@@ -1,5 +1,3 @@
--- TODO
-
 -- references:
 -- https://github.com/nvim-neo-tree/neo-tree.nvim
 -- https://github.com/nvim-neo-tree/neo-tree.nvim/wiki/Recipes
@@ -12,7 +10,7 @@ return {
 	},
 	event = "VeryLazy",
 	keys = {
-		{ "<leader>e", ":Neotree toggle float<CR>", silent = true, desc = "Float File Explorer" },
+		{ "<leader>e", ":Neotree position=float reveal_force_cwd<CR>", silent = true, desc = "Float File Explorer" },
 		{ "<leader><tab>", ":Neotree toggle left<CR>", silent = true, desc = "Left File Explorer" },
 	},
 	config = function()
@@ -59,6 +57,10 @@ return {
 				width = 35,
 			},
 			filesystem = {
+				follow_current_file = {
+					enabled = true,
+					leave_dirs_open = false,
+				},
 				use_libuv_file_watcher = true,
 				filtered_items = {
 					hide_dotfiles = false,
@@ -70,6 +72,10 @@ return {
 						".DS_Store",
 						"thumbs.db",
 					},
+				},
+				buffers = {
+					follow_current_file = true,
+					leave_dirs_open = false,
 				},
 			},
 			event_handlers = {

@@ -19,8 +19,9 @@
 | `<leader>[d`    | LSP - next diagnostic                                    |
 | `<leader>]d`    | LSP - previous diagnostic                                |
 | `<leader>ws`    | LSP - search for symbol in workspace                     |
-| `<leader>e`     | Neotree - open in float mode                             |
-| `<leader><tab>` | Neotree - open on left side                              |
+| `<leader>e`     | Neotree - opn in float mode                              |
+| `<leader><tab>` | Neotree - open to the left                               |
+| `P`             | Neotree - preview file                                   |
 | `<leader>hh`    | Harpoon - open UI                                        |
 | `<leader>a`     | Harpoon - add mark                                       |
 | `<leader>1`     | Harpoon - mark 1                                         |
