@@ -47,6 +47,11 @@
 `:NoNeckPain` - Place a buffer in the middle of the screen.
 `:NoNeckPainResize` - Resize the buffer (arg INT).
 
+## git
+
+`:Git blame` - if you want to check difference between different commits.
+`<leader>df` - if you want to check difference between current file and the last commit.
+
 # Tips & Tricks
 
 Pressing K once again in a hover window would lead to corresponding manpage (if any). [JavaScript manpages](https://github.com/mohd-akram/mdnpages).
