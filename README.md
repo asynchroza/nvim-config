@@ -11,6 +11,7 @@
 | `<leader>gb`    | Open telescope - git branches                            |
 | `<leader>gb`    | Open telescope - git commits                             |
 | `<leader>gs`    | Open telescope - treesitter symbols                      |
+| `<leader>df`    | Open telescope - diff this                               |
 | `<leader>gd`    | LSP - go to definition                                   |
 | `K`             | LSP - hover                                              |
 | `<leader>ca`    | LSP - code actions                                       |
