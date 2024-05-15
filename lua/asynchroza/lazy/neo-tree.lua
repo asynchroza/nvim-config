@@ -10,7 +10,7 @@ return {
 	},
 	event = "VeryLazy",
 	keys = {
-		{ "<leader>e", ":Neotree position=float reveal_force_cwd<CR>", silent = true, desc = "Float File Explorer" },
+		{ "<leader>]", ":Neotree position=float reveal_force_cwd<CR>", silent = true, desc = "Float File Explorer" },
 		{ "<leader><tab>", ":Neotree toggle left<CR>", silent = true, desc = "Left File Explorer" },
 	},
 	config = function()
@@ -76,6 +76,12 @@ return {
 				buffers = {
 					follow_current_file = true,
 					leave_dirs_open = false,
+				},
+				window = {
+					mappings = {
+						-- disbale fuzzy finder --
+						["/"] = "noop",
+					},
 				},
 			},
 			event_handlers = {
