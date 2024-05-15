@@ -19,7 +19,7 @@ return {
 		vim.keymap.set("n", "<leader>s", builtin.find_files, {})
 		vim.keymap.set("n", "<leader>gt", builtin.help_tags, {})
 		vim.keymap.set("n", "<leader>gg", function()
-			builtin.grep_string({ search = "" })
+			builtin.live_grep()
 		end)
 		vim.keymap.set("n", "<leader>rr", function()
 			builtin.grep_string({ search = vim.fn.input("Grep > ") })
