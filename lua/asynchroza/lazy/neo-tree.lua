@@ -10,7 +10,7 @@ return {
 	},
 	event = "VeryLazy",
 	keys = {
-		{ "<leader>]", ":Neotree position=float reveal_force_cwd<CR>", silent = true, desc = "Float File Explorer" },
+		{ "<leader>e", ":Neotree position=float reveal_force_cwd<CR>", silent = true, desc = "Float File Explorer" },
 		{ "<leader><tab>", ":Neotree toggle left<CR>", silent = true, desc = "Left File Explorer" },
 	},
 	config = function()
