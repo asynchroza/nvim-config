@@ -4,8 +4,8 @@
 
 | Command         | Description                                              |
 | --------------- | -------------------------------------------------------- |
-| `<leader>s`     | Open telescope - find files                              |
-| `<leader>g`     | Open telescope - grep for string                         |
+| `<leader>f`     | Open telescope - find files                              |
+| `<leader>s`     | Open telescope - grep for string                         |
 | `<leader>rr`    | Grep first then open in telescope                        |
 | `<leader>gt`    | Open telescope - help tags                               |
 | `<leader>gb`    | Open telescope - git branches                            |
