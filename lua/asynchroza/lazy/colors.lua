@@ -1,22 +1,14 @@
 return {
-    {
-        "rebelot/kanagawa.nvim",
-        lazy = false,
-        priority = 1000,
-        init = function()
-            local kanagawa = require('kanagawa')
-            kanagawa.setup({
-                colors = {
-                    theme = {
-                        all = {
-                            ui = {
-                                bg_gutter = "none"
-                            }
-                        }
-                    }
-                }
-            })
-            kanagawa.load('dragon')
-        end
-    },
+	{
+		"olivercederborg/poimandres.nvim",
+		priority = 1000,
+		config = function()
+			require("poimandres").setup({
+				disable_background = true,
+			})
+		end,
+		init = function()
+			vim.cmd("colorscheme poimandres")
+		end,
+	},
 }
