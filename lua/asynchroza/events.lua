@@ -18,10 +18,6 @@ autocmd("LspAttach", {
 			vim.lsp.buf.hover()
 		end, opts)
 
-		vim.keymap.set("n", "<leader>ws", function()
-			vim.lsp.buf.workspace_symbol()
-		end, opts)
-
 		vim.keymap.set("n", "<leader>vd", function()
 			vim.diagnostic.open_float()
 		end, opts)
@@ -30,7 +26,7 @@ autocmd("LspAttach", {
 			vim.lsp.buf.code_action()
 		end, opts)
 
-		vim.keymap.set("n", "<leader>vrn", function()
+		vim.keymap.set("n", "<leader>rn", function()
 			vim.lsp.buf.rename()
 		end, opts)
 

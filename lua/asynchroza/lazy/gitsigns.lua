@@ -19,6 +19,6 @@ return {
 		})
 
 		-- Keymaps
-		vim.api.nvim_set_keymap("n", "<leader>df", ":Gitsigns diffthis <CR>", { noremap = true, silent = true })
+		vim.api.nvim_set_keymap("n", "<leader>df", ":Gitsigns diffthis ~", { noremap = true, silent = true })
 	end,
 }

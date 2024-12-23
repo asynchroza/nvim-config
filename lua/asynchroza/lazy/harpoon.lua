@@ -12,6 +12,7 @@ return {
 		vim.keymap.set("n", "<leader>h", function()
 			harpoon.ui:toggle_quick_menu(harpoon:list())
 		end)
+
 		--
 		--[[ 
 
