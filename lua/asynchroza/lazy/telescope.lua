@@ -5,7 +5,8 @@ return {
 
     dependencies = {
         "nvim-lua/plenary.nvim",
-        "nvim-telescope/telescope-ui-select.nvim"
+        "nvim-telescope/telescope-ui-select.nvim",
+        "debugloop/telescope-undo.nvim"
     },
 
     config = function()
@@ -15,6 +16,15 @@ return {
                 sorting_strategy = "ascending",
             },
             extensions = {
+                undo = {
+                    use_delta = true,
+                    saved_only = false,
+                    layout_strategy = "vertical",
+                    side_by_side = true,
+                    layout_config = {
+                        preview_height = 0.8,
+                    }
+                },
                 ["ui-select"] = {
                     require("telescope.themes").get_dropdown({
                         winblend = 10,
@@ -32,12 +42,15 @@ return {
         -- Load ui-select --
         require("telescope").load_extension("ui-select")
 
+        -- Load undo extension --
+        require("telescope").load_extension("undo")
+
         local builtin = require("telescope.builtin")
-        vim.keymap.set("n", "<leader>f", builtin.find_files, {
+        vim.keymap.set("n", "<leader>s", builtin.find_files, {
             desc = "Telescope: Find Files, Search for files in the current directory"
         })
         vim.keymap.set("n", "<leader>gt", builtin.help_tags, { desc = "Telescope: Help Tags" })
-        vim.keymap.set("n", "<leader>s", builtin.live_grep, { desc = "Telescope: Live Grep. Search for stuff in files" })
+        vim.keymap.set("n", "<leader>f", builtin.live_grep, { desc = "Telescope: Live Grep. Search for stuff in files" })
         vim.keymap.set("n", "<leader>rr", function()
             builtin.grep_string({ search = vim.fn.input("Grep > ") })
         end, { desc = "Telescope: Grep String, Search for string before showing telescope" })
@@ -45,5 +58,7 @@ return {
         vim.keymap.set("n", "<leader>gc", builtin.git_commits, { desc = "Telescope: Show git commits" })
         vim.keymap.set("n", "<leader>gs", builtin.treesitter, { desc = "Telescope: Treesitter, Symbols" })
         vim.keymap.set("n", "<leader>k", builtin.keymaps, { desc = "Telescope: Keymaps, Shortcuts, Commands" })
+
+        vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>", { desc = "Telescope: Undo Tree" })
     end,
 }
