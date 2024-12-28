@@ -11,6 +11,7 @@ return {
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
+        "folke/neodev.nvim"
     },
 
     config = function()
@@ -22,6 +23,9 @@ return {
             vim.lsp.protocol.make_client_capabilities(),
             cmp_lsp.default_capabilities()
         )
+
+        -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
+        require("neodev").setup({})
 
         require("fidget").setup({})
         require("mason").setup()
