@@ -21,15 +21,17 @@ return {
             "force",
             {},
             vim.lsp.protocol.make_client_capabilities(),
-            cmp_lsp.default_capabilities()
+            cmp_lsp.default_capabilities(),
+            require("lsp-file-operations").default_capabilities()
         )
 
         -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
-        require("neodev").setup({})
+        require("neodev").setup()
 
         require("fidget").setup({})
         require("mason").setup()
         require("mason-lspconfig").setup({
+            automatic_installation = true,
             ensure_installed = {
                 "lua_ls",
                 "rust_analyzer",
@@ -88,7 +90,7 @@ return {
                 focusable = false,
                 style = "minimal",
                 border = "rounded",
-                source = "always",
+                source = true,
                 header = "",
                 prefix = "",
             },
