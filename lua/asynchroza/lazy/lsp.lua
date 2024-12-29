@@ -25,6 +25,14 @@ return {
             require("lsp-file-operations").default_capabilities()
         )
 
+        -- Hook up dadbod completion for sql connections/queries --
+        cmp.setup.filetype({ "sql" }, {
+            sources = {
+                { name = "vim-dadbod-completion" },
+                { name = "buffer" }
+            },
+        })
+
         -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
         require("neodev").setup()
 
