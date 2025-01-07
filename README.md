@@ -32,3 +32,5 @@ Increase height of window - `ctrl-w <n>+` - `ctrl-w 10+`
 `ctrl-b <number>` - move to window number  
 
 [Tmux Guide](https://hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)  
+[Fix For Propagating Keys Through Tmux
+](https://gist.github.com/asynchroza/a4b52e2c00427e70731def4401a42570)

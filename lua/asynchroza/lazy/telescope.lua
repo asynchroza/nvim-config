@@ -16,6 +16,7 @@ return {
                 sorting_strategy = "ascending",
             },
             extensions = {
+--[[ 
                 undo = {
                     use_delta = true,
                     saved_only = false,
@@ -24,7 +25,8 @@ return {
                     layout_config = {
                         preview_height = 0.8,
                     }
-                },
+                }, 
+]]--
                 ["ui-select"] = {
                     require("telescope.themes").get_dropdown({
                         winblend = 10,
@@ -52,7 +54,7 @@ return {
         vim.keymap.set("n", "<leader>gt", builtin.help_tags, { desc = "Telescope: Help Tags" })
         vim.keymap.set("n", "<leader>f", builtin.live_grep, { desc = "Telescope: Live Grep. Search for stuff in files" })
         vim.keymap.set("n", "<leader>rr", function()
-            builtin.grep_string({ search = vim.fn.input("Grep > ") })
+            builtin.grep_string({ shorten_path = true, word_match = "-w", only_sort_text = true, search = '' })
         end, { desc = "Telescope: Grep String, Search for string before showing telescope" })
         vim.keymap.set("n", "<leader>gb", builtin.git_branches, { desc = "Telescope: Show git branches" })
         vim.keymap.set("n", "<leader>gc", builtin.git_commits, { desc = "Telescope: Show git commits" })
