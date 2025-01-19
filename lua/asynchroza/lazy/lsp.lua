@@ -44,8 +44,7 @@ return {
                 "lua_ls",
                 "rust_analyzer",
                 "ts_ls",
-                "gopls",
-                "astro-language-server"
+                "gopls"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
