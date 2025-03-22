@@ -34,3 +34,7 @@ Increase height of window - `ctrl-w <n>+` - `ctrl-w 10+`
 [Tmux Guide](https://hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)  
 [Fix For Propagating Keys Through Tmux
 ](https://gist.github.com/asynchroza/a4b52e2c00427e70731def4401a42570)
+
+# VIM Motions
+
+- `ci<symbol>` - delete between the pattern starting with the symbol and closing symbol - `ci(` will delete the arguments in the brackets - `function(arg1, arg2, arg3)`
