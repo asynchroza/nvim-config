@@ -14,13 +14,11 @@ return {
 			enabled = true,
 			timeout_ts = 1000,
 			autosave_changes = false
-		},
-  		keymaps = {
-			["<leader>e"] = { "actions.open_cwd", mode = "n" }
-  		}
+		}
   	})
-
-	vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open Oil in parent directory" })
-	vim.keymap.set("n", "_", "<CMD>Oil<CR>", { desc = "Open Oil in current directory" })
+	
+	local desc = "Open Oil in current directory and navigates to parent directory if used inside Oil"
+	vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = desc })
+	vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = desc })
   end
 }
