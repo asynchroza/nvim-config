@@ -16,7 +16,7 @@ return {
 			autosave_changes = false
 		}
   	})
-	
+
 	local desc = "Open Oil in current directory and navigates to parent directory if used inside Oil"
 	vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = desc })
 	vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = desc })
