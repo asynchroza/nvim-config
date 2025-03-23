@@ -100,5 +100,26 @@ return {
                 prefix = "",
             },
         })
+
+	vim.api.nvim_create_autocmd("LspAttach", {
+		callback = function (ev)
+			local opts = { buffer = ev.buf }
+
+			---comment
+			---@param mode string 
+			---@param command string
+			---@param callback function
+			local set_keymap = function (mode, command, callback)
+				vim.keymap.set(mode, command, function ()
+					callback()
+				end, opts)
+			end
+
+			-- set_keymap("n", "gd", vim.lsp.buf.definition) -- Set in fzf-lua
+			-- set_keymap("n", "gr", vim.lsp.buf.references) -- Set in fzf-lua
+			set_keymap("n", "<leader>rn", vim.lsp.buf.rename)
+			set_keymap("n", "<leader>k", vim.diagnostic.open_float) -- TODO: Combine open_float and hover action outputs in one
+		end
+	})
     end,
 }
