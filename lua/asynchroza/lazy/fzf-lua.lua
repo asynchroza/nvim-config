@@ -5,6 +5,7 @@ return {
   opts = {},
   config = function()
   	vim.keymap.set("n", "<leader>fm", "<CMD>FzfLua marks<CR>")
+  	vim.keymap.set("n", "<leader>ff", "<CMD>FzfLua live_grep<CR>")
   	vim.keymap.set("n", "<leader>fb", "<CMD>FzfLua git_blame<CR>")
 
 	-- TODO: Explore what else you can use from fzf lua to replace native lsp implementations
