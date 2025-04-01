@@ -25,7 +25,7 @@ return {
 
 			set_keymap("n", "gd", "<CMD>FzfLua lsp_definitions<CR>")
 			set_keymap("n", "gr", "<CMD>FzfLua lsp_references<CR>")
-			set_keymap("n", "<C-.>", "<CMD>FzfLua lsp_code_actions<CR>")
+			set_keymap("n", "ca", "<CMD>FzfLua lsp_code_actions<CR>")
 		end
 	})
   end

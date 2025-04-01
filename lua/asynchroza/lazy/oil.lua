@@ -9,7 +9,7 @@ return {
 	require("oil").setup({
    		default_file_explorer = true,
 		delete_to_trash = true,
-		prompt_save_on_select_new_entry = true,
+		prompt_save_on_select_new_entry = false,
 		lsp_file_methods = {
 			enabled = true,
 			timeout_ts = 1000,
@@ -19,6 +19,6 @@ return {
 
 	local desc = "Open Oil in current directory and navigates to parent directory if used inside Oil"
 	vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = desc })
-	vim.keymap.set("n", "<leader>e", "<CMD>lua require('oil').toggle_float()<CR>", { desc = desc })
+	vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = desc })
   end
 }
