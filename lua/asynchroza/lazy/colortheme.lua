@@ -29,8 +29,17 @@ return {
   },
   lazy = false,
   priority = 1000,
-  opts = {
-      colors = MINIMAL_COLORS
-  }
+  config = function ()
+    local noirbuddy = require("noirbuddy")
+
+    local g = require("colorbuddy.group").Group
+    local c = require("colorbuddy.color").Color
+
+    local green = c.new("green", "#99cc99")
+
+    g.new("string", green)
+
+    noirbuddy.setup({colors = MINIMAL_COLORS})
+  end
 }
 
