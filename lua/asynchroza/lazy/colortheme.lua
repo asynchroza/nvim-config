@@ -1,4 +1,5 @@
-local COLORS = {
+--- TODO: Figure out where the green strings come from in other languages ---
+local MINIMAL_COLORS = {
   background = '#121212',
   primary = '#ff0088',
   secondary = '#d5d5d5',
@@ -29,7 +30,7 @@ return {
   lazy = false,
   priority = 1000,
   opts = {
-      colors = COLORS
+      colors = MINIMAL_COLORS
   }
 }
 
