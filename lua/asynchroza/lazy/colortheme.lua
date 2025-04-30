@@ -34,10 +34,10 @@ return {
     local g = require("colorbuddy.group").Group
     local c = require("colorbuddy.color").Color
 
+    noirbuddy.setup({colors = MINIMAL_COLORS})
+
     local green = c.new("green", "#99cc99")
     g.new("string", green)
-
-    noirbuddy.setup({colors = MINIMAL_COLORS})
   end
 }
 
