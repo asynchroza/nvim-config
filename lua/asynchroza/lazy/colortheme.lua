@@ -38,6 +38,8 @@ return {
 
     local green = c.new("green", "#99cc99")
     g.new("string", green)
+
+    c.new("background", "#222222")
   end
 }
 
