@@ -30,6 +30,7 @@ return {
   priority = 1000,
   config = function ()
     local noirbuddy = require("noirbuddy")
+    local colors = require('colorbuddy').colors
 
     local g = require("colorbuddy.group").Group
     local c = require("colorbuddy.color").Color
@@ -40,6 +41,7 @@ return {
     g.new("string", green)
 
     c.new("background", "#222222")
+    g.new("LineNr", colors.secondary, colors.background)
   end
 }
 

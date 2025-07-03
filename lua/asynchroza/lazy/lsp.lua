@@ -32,9 +32,6 @@ return {
             },
         })
 
-        -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
-        require("neodev").setup()
-
         require("fidget").setup({})
         require("mason").setup()
         require("mason-lspconfig").setup({
